@@ -1,0 +1,16 @@
+{
+  "nyc": {
+    "all": true,
+    "include": [
+      "lib/**"
+    ],
+    "exclude": [
+      "**/*.spec.js"
+    ],
+    "require": [
+      "@babel/register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "name": "@gomi/fxjs",
+  "version": "1.3.1",
+  "description": "Enable Functional JS Programming with iterable/iterate protocol concept.",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "webpack",
+    "test": "cross-env NODE_ENV=test nyc mocha **/*.spec.js --require @babel/register --require @babel/polyfill --recursive -w",
+    "cover": "npm run cover:test && npm run cover:report",
+    "cover:test": "cross-env NODE_ENV=test nyc mocha **/*.spec.js --require @babel/register --require @babel/polyfill",
+    "cover:report": "npx nyc report --reporter=html"
+  },
+  "keywords": [
+    "node",
+    "gomi",
+    "functional programming",
+    "iterable",
+    "iterate"
+  ],
+  "repository": "https://github.com/gomicorporation/FxJS.git",
+  "contributors": [
+    "Fred Kim <fred@gomicorp.com> (https://github.com/yhk1038)"
+  ],
+  "license": "MIT",
+  "nyc": {
+    "include": [
+      "lib/index.js",
+      "lib**"
+    ],
+    "extension": [
+      ".js"
+    ],
+    "reporter": [
+      "html"
+    ],
+    "cache": false,
+    "all": true
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.0",
+    "@babel/core": "^7.8.0",
+    "@babel/node": "^7.8.0",
+    "@babel/plugin-proposal-class-properties": "^7.8.0",
+    "@babel/preset-env": "^7.8.0",
+    "@babel/register": "^7.8.0",
+    "@istanbuljs/nyc-config-babel": "^3.0.0",
+    "assert": "^2.0.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-istanbul": "^6.0.0",
+    "chai": "^4.2.0",
+    "cross-env": "^6.0.3",
+    "esm": "^3.2.25",
+    "mocha": "^7.0.0",
+    "nyc": "^15.0.0",
+    "shoulda": "0.0.1",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.8.0"
+  }
+}
