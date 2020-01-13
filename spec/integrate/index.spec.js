@@ -1,5 +1,5 @@
 const assert = require('assert');
-import fx from '../../lib/index';
+import fx from '../../lib/index.mjs';
 
 const has_module = (name, i) => it(`${i ? `${i}. ` : ''}${name}`, () => assert.equal(typeof fx[name], 'function'));
 const pending_module = (name) => it(name);

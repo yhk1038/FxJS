@@ -4,6 +4,7 @@ coverage/
 node_modules/
 test/
 spec/
+.ignore/
 webpack.*.js
 .babelrc
 .nycrc.json

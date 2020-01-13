@@ -1,12 +1,28 @@
 {
   "presets": [
-    "@babel/preset-env"
+    ["@babel/preset-env", { "targets": ["node 6"] }]
   ],
-  "plugins": ["@babel/plugin-proposal-class-properties"],
+  "plugins": [
+    ["@babel/plugin-transform-classes", { "loose": true }],
+    ["@babel/plugin-transform-destructuring", { "loose": true }],
+    ["@babel/plugin-transform-spread", { "loose": true }],
+    ["@babel/plugin-syntax-dynamic-import"],
+    ["@babel/plugin-syntax-import-meta"]
+  ],
   "env": {
     "test": {
       "plugins": [
         "istanbul"
+      ]
+    },
+    "cjs": { 
+      "presets": [
+        ["@babel/preset-env", { "modules": "commonjs" }]
+      ]
+    },
+    "mjs": {
+      "presets": [
+        ["@babel/preset-env", { "modules": false }]
       ]
     }
   }

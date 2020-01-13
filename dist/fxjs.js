@@ -86,12 +86,12 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./lib/features/curry.js":
-/*!*******************************!*\
-  !*** ./lib/features/curry.js ***!
-  \*******************************/
+/***/ "./lib/features/curry.mjs":
+/*!********************************!*\
+  !*** ./lib/features/curry.mjs ***!
+  \********************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
@@ -101,20 +101,20 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./lib/features/each.js":
-/*!******************************!*\
-  !*** ./lib/features/each.js ***!
-  \******************************/
+/***/ "./lib/features/each.mjs":
+/*!*******************************!*\
+  !*** ./lib/features/each.mjs ***!
+  \*******************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _curry__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./curry */ "./lib/features/curry.js");
+/* harmony import */ var _curry_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./curry.mjs */ "./lib/features/curry.mjs");
 
 
 // each
-/* harmony default export */ __webpack_exports__["default"] = (Object(_curry__WEBPACK_IMPORTED_MODULE_0__["default"])((f, iter) => {
+/* harmony default export */ __webpack_exports__["default"] = (Object(_curry_mjs__WEBPACK_IMPORTED_MODULE_0__["default"])((f, iter) => {
   for (const [i, a] of iter.entries()) f(a, i, iter);
   return iter;
 }));
@@ -122,20 +122,20 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./lib/features/map.js":
-/*!*****************************!*\
-  !*** ./lib/features/map.js ***!
-  \*****************************/
+/***/ "./lib/features/map.mjs":
+/*!******************************!*\
+  !*** ./lib/features/map.mjs ***!
+  \******************************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _curry__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./curry */ "./lib/features/curry.js");
+/* harmony import */ var _curry_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./curry.mjs */ "./lib/features/curry.mjs");
 
 
 // each
-/* harmony default export */ __webpack_exports__["default"] = (Object(_curry__WEBPACK_IMPORTED_MODULE_0__["default"])((f, iter) => {
+/* harmony default export */ __webpack_exports__["default"] = (Object(_curry_mjs__WEBPACK_IMPORTED_MODULE_0__["default"])((f, iter) => {
   const res = [];
   for (const [i, a] of iter.entries()) res.push(f(a, i, iter));
   return res;
@@ -144,26 +144,26 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./lib/index.js":
-/*!**********************!*\
-  !*** ./lib/index.js ***!
-  \**********************/
+/***/ "./lib/index.mjs":
+/*!***********************!*\
+  !*** ./lib/index.mjs ***!
+  \***********************/
 /*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(__webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _features_curry__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./features/curry */ "./lib/features/curry.js");
-/* harmony import */ var _features_each__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./features/each */ "./lib/features/each.js");
-/* harmony import */ var _features_map__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./features/map */ "./lib/features/map.js");
+/* harmony import */ var _features_curry_mjs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./features/curry.mjs */ "./lib/features/curry.mjs");
+/* harmony import */ var _features_each_mjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./features/each.mjs */ "./lib/features/each.mjs");
+/* harmony import */ var _features_map_mjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./features/map.mjs */ "./lib/features/map.mjs");
 
 
 
 
 const fx = {
-  curry: _features_curry__WEBPACK_IMPORTED_MODULE_0__["default"],
-  each: _features_each__WEBPACK_IMPORTED_MODULE_1__["default"],
-  map: _features_map__WEBPACK_IMPORTED_MODULE_2__["default"],
+  curry: _features_curry_mjs__WEBPACK_IMPORTED_MODULE_0__["default"],
+  each: _features_each_mjs__WEBPACK_IMPORTED_MODULE_1__["default"],
+  map: _features_map_mjs__WEBPACK_IMPORTED_MODULE_2__["default"],
 };
 
 // if (window) window.fx = fx;
@@ -10334,14 +10334,14 @@ try {
 /***/ }),
 
 /***/ 0:
-/*!********************************************!*\
-  !*** multi @babel/polyfill ./lib/index.js ***!
-  \********************************************/
+/*!*********************************************!*\
+  !*** multi @babel/polyfill ./lib/index.mjs ***!
+  \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! @babel/polyfill */"./node_modules/@babel/polyfill/lib/index.js");
-module.exports = __webpack_require__(/*! ./lib/index.js */"./lib/index.js");
+module.exports = __webpack_require__(/*! ./lib/index.mjs */"./lib/index.mjs");
 
 
 /***/ })
